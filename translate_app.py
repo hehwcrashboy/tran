@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 
 def fetch_translation(text):
-    openai.api_key = os.environ.get("OPENAI_API_KEY")  # Replace with your actual API key
+    openai_api_key = st.secrets["OPENAI_API_KEY"]  # Replace with your actual API key
 
     prompt = f'Translate the following English text to Chinese: "{text}"'
 
